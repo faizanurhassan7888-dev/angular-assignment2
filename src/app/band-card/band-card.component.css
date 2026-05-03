@@ -1,0 +1,88 @@
+:host {
+  display: block;
+}
+
+.band-card {
+  background: rgba(7, 10, 23, 0.85);
+  border: 3px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  color: #f3f6ff;
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.band-card:hover {
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.28);
+  transform: translateY(-4px);
+}
+
+.card-top {
+  align-items: start;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.genre-label {
+  color: #aab6d8;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.sold-out-badge {
+  background: #f5c451;
+  border-radius: 999px;
+  color: #241900;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.45rem 0.8rem;
+  white-space: nowrap;
+}
+
+.detail-row {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.detail-row span {
+  color: #cdd4eb;
+}
+
+button {
+  background: linear-gradient(135deg, #fff0b8, #ffd166);
+  border: none;
+  border-radius: 12px;
+  color: #201403;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+}
+
+button:hover {
+  filter: brightness(1.03);
+}
+
+.metal-theme {
+  background:
+    linear-gradient(145deg, rgba(63, 7, 22, 0.7), rgba(16, 19, 33, 0.95)),
+    #13141b;
+}
+
+.rock-theme {
+  background:
+    linear-gradient(145deg, rgba(109, 49, 9, 0.7), rgba(20, 23, 37, 0.95)),
+    #181920;
+}

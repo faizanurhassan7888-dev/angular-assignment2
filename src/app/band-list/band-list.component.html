@@ -1,0 +1,30 @@
+<section class="page-shell">
+  <header class="hero">
+    <p class="eyebrow">Assignment 2</p>
+    <h1>Music Scene Manager</h1>
+    <p class="subtitle">Student: Faizan Ur Hassan | CC205484</p>
+  </header>
+
+  <section class="toolbar">
+    <label for="genreFilter">Filter By Genre</label>
+    <select id="genreFilter" [(ngModel)]="selectedGenre">
+      <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+    </select>
+    <p class="results-count">Showing {{ filteredBands.length }} act(s)</p>
+  </section>
+
+  <section class="band-grid" *ngIf="filteredBands.length; else emptyState">
+    <app-band-card
+      *ngFor="let item of filteredBands"
+      [band]="item"
+      (deleteRequested)="removeBand($event)"
+    />
+  </section>
+
+  <ng-template #emptyState>
+    <section class="empty-state">
+      <h2>No bands match this genre</h2>
+      <p>Choose another filter to see more performance listings.</p>
+    </section>
+  </ng-template>
+</section>
